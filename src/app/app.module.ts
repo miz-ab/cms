@@ -7,7 +7,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomButtonComponent } from './coreComponent/custom-button/custom-button.component';
+
+
 
 
 
@@ -15,15 +16,13 @@ import { CustomButtonComponent } from './coreComponent/custom-button/custom-butt
 @NgModule({
   declarations: [
     AppComponent,
-    CustomButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    MatIconModule,
-    
-],
+    MatIconModule
+  ],
   exports: [],
   providers: [
     provideAnimationsAsync()
