@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { LayoutComponent } from './core/layout/layout.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RegisterComponent } from './pages/register/register.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

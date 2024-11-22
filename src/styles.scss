@@ -1,4 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "./app/core/layout/layout.component.theme" as layout-theme;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@include mat.core();
+
+$light-theme: mat.define-theme(
+  (
+    color: (
+      use-system-variables: true
+    ),
+    typography: (
+        use-system-variables: true
+    )
+  )
+);
+
+
+:root {
+    @include mat.all-component-themes($light-theme);
+    @include layout-theme.theme($light-theme);
+    @include mat.system-level-colors($light-theme); // 👈 Added
+    @include mat.system-level-typography($light-theme); // 👈 Added
+  }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
